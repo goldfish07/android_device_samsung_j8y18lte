@@ -25,6 +25,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := lineage_j8y18lte
 PRODUCT_DEVICE := j8y18lte
+PRODUCT_MODEL := SM-J810G
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
