@@ -46,6 +46,11 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $
 TARGET_KERNEL_SOURCE := kernel/samsung/j8y18lte
 TARGET_KERNEL_CONFIG := j8y18lte_defconfig
 
+# Kernel Toolchain
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+KERNEL_TOOLCHAIN := $(BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
+TARGET_LINUX_KERNEL_VERSION := 3.18
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE :=  33554432 #25
 BOARD_RECOVERYIMAGE_PARTITION_SIZE :=  33554432 #26
