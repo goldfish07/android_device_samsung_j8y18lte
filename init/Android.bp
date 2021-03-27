@@ -1,0 +1,11 @@
+cc_library_static {
+    name: "libinit_j8y18lte",
+    recovery_available: true,
+    srcs: [
+        "init_j8y18lte.cpp",
+    ],
+    include_dirs: [
+        "system/core/base/include",
+        "system/core/init",
+    ],
+}
