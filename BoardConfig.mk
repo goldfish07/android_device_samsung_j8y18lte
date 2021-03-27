@@ -15,7 +15,7 @@
 # inherit from the proprietary version
 -include vendor/samsung/j8y18lte/BoardConfigVendor.mk
 LOCAL_PATH := device/samsung/j8y18lte
-
+BUILD_TOP := $(shell pwd)
 BUILD_BROKEN_DUP_RULES := true
 
 # CPU
