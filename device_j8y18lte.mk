@@ -19,6 +19,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+	init.j8y18lte.rc \
+    init.msm.usb.configfs.rc \
+    init.qcom.rc \
+	init.qcom.factory.rc \
+    init.qcom.rc \
+    init.qcom.usb.rc \
+	init.samsung.bsp.rc \
+	init.samsung.rc \
+    init.target.rc \
+    ueventd.qcom.rc
 
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/j8y18lte/j8y18lte-vendor.mk)

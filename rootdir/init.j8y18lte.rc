@@ -1,0 +1,229 @@
+on post-fs-data
+
+#SystemFramework
+    chown system system /data/cache/backup
+    chmod 0711 /data/cache/backup
+    chown system system /data/cache/backup_stage
+    chmod 0711 /data/cache/backup_stage
+
+# OLAF setup cgroup freezer
+    mkdir /dev/freezer
+    mount cgroup none /dev/freezer freezer
+    mkdir /dev/freezer/olaf
+    write /dev/freezer/olaf/freezer.state THAWED
+    mkdir /dev/cpuset/olaf
+    copy /dev/cpuset/cpus /dev/cpuset/olaf/cpus
+    copy /dev/cpuset/mems /dev/cpuset/olaf/mems
+    chown system system /dev/freezer/olaf
+    chown system system /dev/freezer/olaf/tasks
+    chown system system /dev/freezer/olaf/cgroup.procs
+    chown system system /dev/freezer/olaf/freezer.state
+    chown system system /dev/cpuset/olaf
+    chown system system /dev/cpuset/olaf/tasks
+    chown system system /dev/cpuset/olaf/cpus
+    chmod 0644 /dev/freezer/olaf/tasks
+    chmod 0644 /dev/freezer/olaf/cgroup.procs
+    chmod 0644 /dev/freezer/olaf/freezer.state
+    chmod 0664 /dev/cpuset/olaf
+    chmod 0664 /dev/cpuset/olaf/tasks
+    chmod 0664 /dev/cpuset/olaf/cpus
+	
+# Accelerometer Sensor
+    chown system radio /sys/class/sensors/accelerometer_sensor/name
+    chown system radio /sys/class/sensors/accelerometer_sensor/vendor
+    chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
+    chown system radio /sys/class/sensors/accelerometer_sensor/calibration
+    chown system radio /sys/class/sensors/accelerometer_sensor/selftest
+    chown system radio /sys/class/sensors/accelerometer_sensor/reactive_alert
+    chown system radio /sys/class/sensors/accelerometer_sensor/lowpassfilter
+    chown system system /sys/class/sensors/accelerometer_sensor/dhr_sensor_info
+	
+# Proximity Sensor
+    chown system radio /sys/class/sensors/proximity_sensor/name
+    chown system radio /sys/class/sensors/proximity_sensor/vendor
+    chown system radio /sys/class/sensors/proximity_sensor/state
+    chown system radio /sys/class/sensors/proximity_sensor/raw_data
+    chown system radio /sys/class/sensors/proximity_sensor/barcode_emul_en
+    chown system radio /sys/class/sensors/proximity_sensor/prox_avg
+    chown system radio /sys/class/sensors/proximity_sensor/prox_cal
+    chown system radio /sys/class/sensors/proximity_sensor/thresh_high
+    chown system radio /sys/class/sensors/proximity_sensor/thresh_low
+    chown system radio /sys/class/sensors/proximity_sensor/prox_offset_pass
+    chown system radio /sys/class/sensors/proximity_sensor/prox_trim
+    chown system radio /sys/class/sensors/proximity_sensor/thresh_detect_high
+    chown system radio /sys/class/sensors/proximity_sensor/thresh_detect_low
+    chown system radio /sys/class/sensors/proximity_sensor/prox_alert_thresh
+    chown system system /sys/class/sensors/proximity_sensor/dhr_sensor_info
+	
+# Grip Sensor
+    chown system radio /sys/class/sensors/grip_sensor/name
+    chown system radio /sys/class/sensors/grip_sensor/vendor
+    chown system radio /sys/class/sensors/grip_sensor/raw_data
+    chown system radio /sys/class/sensors/grip_sensor/threshold
+    chown system radio /sys/class/sensors/grip_sensor/calibration
+    chown system radio /sys/class/sensors/grip_sensor/onoff
+    chown system radio /sys/class/sensors/grip_sensor/reset
+    chown system radio /sys/class/sensors/grip_sensor/mode
+    chown system radio /sys/class/sensors/grip_sensor/gain
+    chown system radio /sys/class/sensors/grip_sensor/start
+    chown system radio /sys/class/sensors/grip_sensor/normal_threshold
+    chown system radio /sys/class/sensors/grip_sensor/gain_ch2
+    chown system radio /sys/class/sensors/grip_sensor/raw_data_ch2
+    chown system radio /sys/class/sensors/grip_sensor/diff_avg_ch2
+    chown system radio /sys/class/sensors/grip_sensor/normal_threshold_ch2
+    chown system radio /sys/class/sensors/grip_sensor/ch_state
+    chown system radio /sys/class/sensors/grip_sensor/body_threshold
+    chown system radio /sys/class/sensors/grip_sensor/grip_flush
+    chown system radio /sys/class/sensors/grip_sensor/irq_count
+	
+    chown system radio /sys/class/sensors/grip_sensor/grip_irq_count
+    chown system radio /sys/class/sensors/grip_sensor/grip_threshold
+    chown system radio /sys/class/sensors/grip_sensor/grip_total_cap
+    chown system radio /sys/class/sensors/grip_sensor/grip_sar_enable
+    chown system radio /sys/class/sensors/grip_sensor/grip_sw_reset
+    chown system radio /sys/class/sensors/grip_sensor/grip_earjack
+    chown system radio /sys/class/sensors/grip_sensor/grip
+    chown system radio /sys/class/sensors/grip_sensor/grip_baseline
+    chown system radio /sys/class/sensors/grip_sensor/grip_raw
+    chown system radio /sys/class/sensors/grip_sensor/grip_gain
+    chown system radio /sys/class/sensors/grip_sensor/grip_check
+    chown system radio /sys/class/sensors/grip_sensor/grip_sar_only_mode
+    chown system radio /sys/class/sensors/grip_sensor/grip_sar_press_threshold
+    chown system radio /sys/class/sensors/grip_sensor/grip_sar_release_threshold
+    chown system radio /sys/class/sensors/grip_sensor/grip_firm_version_phone
+    chown system radio /sys/class/sensors/grip_sensor/grip_firm_version_panel
+    chown system radio /sys/class/sensors/grip_sensor/grip_firm_update
+    chown system radio /sys/class/sensors/grip_sensor/grip_firm_update_status
+    chown system radio /sys/class/sensors/grip_sensor/grip_irq_state
+    chown system radio /sys/class/sensors/grip_sensor/grip_irq_en_cnt
+    chown system radio /sys/class/sensors/grip_sensor/grip_reg_rw
+    chown system radio /sys/class/sensors/grip_sensor/grip_crc_check
+	
+# Meta event
+    chown system radio /sys/class/sensors/sensor_dev/flush
+    
+# setup cgroup freezer for freecess
+    mkdir /dev/freezer
+    mount cgroup none /dev/freezer freezer
+    mkdir /dev/freezer/frozen
+    mkdir /dev/freezer/thaw
+    write /dev/freezer/frozen/freezer.state FROZEN
+    write /dev/freezer/thaw/freezer.state THAWED
+
+# MARs for freecess
+    chown system system /dev/freezer
+    chown system system /dev/freezer/frozen
+    chown system system /dev/freezer/frozen/tasks
+    chown system system /dev/freezer/frozen/cgroup.procs
+    chown system system /dev/freezer/frozen/freezer.state
+    chown system system /dev/freezer/thaw
+    chown system system /dev/freezer/thaw/tasks
+    chown system system /dev/freezer/thaw/cgroup.procs
+
+# MARs for freecess
+    chmod 0644 /dev/freezer/frozen/tasks
+    chmod 0644 /dev/freezer/frozen/cgroup.procs
+    chmod 0644 /dev/freezer/frozen/freezer.state
+    chmod 0644 /dev/freezer/thaw/tasks
+    chmod 0644 /dev/freezer/thaw/cgroup.procs
+
+on boot
+
+#BUS Permissions
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpubw/available_frequencies
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpubw/min_freq
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpubw/max_freq
+    chown root system /sys/class/devfreq/soc:qcom,cpubw/available_frequencies
+    chown root system /sys/class/devfreq/soc:qcom,cpubw/min_freq
+    chown root system /sys/class/devfreq/soc:qcom,cpubw/max_freq
+
+#Input Booster Permissions
+    chmod 0664 /sys/class/input_booster/level
+    chmod 0664 /sys/class/input_booster/head
+    chmod 0664 /sys/class/input_booster/tail
+    chown system radio /sys/class/input_booster/level
+    chown system radio /sys/class/input_booster/head
+    chown system radio /sys/class/input_booster/tail
+
+
+# SSWAP
+    write /proc/sys/vm/swappiness 130
+
+# POC
+    chown system system /dev/poc
+    chmod 0660 /dev/poc
+
+    chown system system /sys/class/lcd/panel/poc
+    chmod 0660 /sys/class/lcd/panel/poc
+
+# POC_MCA
+    chown system system /sys/class/lcd/panel/poc_mca
+    chmod 0440 /sys/class/lcd/panel/poc_mca
+
+# POC_INFO
+    chown system system /sys/class/lcd/panel/poc_info
+    chmod 0440 /sys/class/lcd/panel/poc_info
+
+
+# SSWAP
+service swapon /sbin/sswap -s -f 2048
+    class core
+    user root
+    group root
+    seclabel u:r:sswap:s0
+    oneshot
+
+# faced
+service faced /system/bin/faced
+    class late_start
+    user system
+    group system
+    
+# Remosaic daemon works with mm-camera daemon
+#service remosaic_daemon /vendor/bin/remosaic_daemon
+#    class core
+#    user camera
+#    group camera
+
+# Move 2 SD card
+#service extSdUFSVold /system/bin/extSDCardServiceVold
+#   class main
+#   user system
+#   group system mount radio net_bt sdcard_rw shell media media_rw
+
+	#Bluetooth
+    # for BT MAC address
+#    mkdir /efs/bluetooth 0770 system bluetooth
+    # if already exist
+#    chown system bluetooth /efs/bluetooth
+#    chown system bluetooth /efs/bluetooth/bt_addr
+#    chmod 0770 /efs/bluetooth
+#    chmod 0660 /efs/bluetooth/bt_addr
+
+    # permissions for bluetooth.
+#    setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
+#    chown bluetooth bluetooth ro.bt.bdaddr_path
+#    chown bluetooth bluetooth /dev/ttyHS0
+#    chmod 0660 /dev/ttyHS0
+#    chmod 0660 /sys/class/rfkill/rfkill0/state
+#    chown bluetooth bluetooth /proc/bluetooth/sleep/proto
+#    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+#    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
+#    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/device/extldo
+
+# umount service
+service umount_service /system/bin/umount -D /preload
+    disabled
+    seclabel u:r:umount_service:s0
+    oneshot
+
+# Support Preload install apks
+on property:persist.sys.storage_preload=1
+    mount ext4 /dev/block/bootdevice/by-name/hidden /preload nosuid nodev ro barrier=1
+    setprop storage.preload.complete 1
+
+on property:persist.sys.storage_preload=0
+    start umount_service
+
+on fs
+    mount none /mnt/vendor/efs /efs bind
