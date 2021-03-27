@@ -75,6 +75,9 @@ TARGET_FS_CONFIG_GEN := $(LOCAL_PATH)/config.fs
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := $(LOCAL_PATH)/compatibility_matrix.xml
 
+# Recovery
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
+
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := vendor
 
