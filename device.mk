@@ -19,6 +19,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Screen density
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+# Resolution
+TARGET_SCREEN_HEIGHT := 1480
+TARGET_SCREEN_WIDTH := 720
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
