@@ -153,6 +153,14 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
 
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl-qti \
+    gps.msm8953 \
+    libcurl \
+    libgnss \
+    libgnsspps
+    
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
