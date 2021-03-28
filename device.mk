@@ -161,6 +161,12 @@ PRODUCT_PACKAGES += \
     libgnss \
     libgnsspps
 
+# Power
+PRODUCT_PACKAGES += \
+    power.qcom \
+    android.hardware.power@1.0-service \
+    android.hardware.power@1.0-impl
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -174,7 +180,7 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
-    
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
