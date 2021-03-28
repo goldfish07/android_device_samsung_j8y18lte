@@ -121,6 +121,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl-qti \
+    libbt-vendor
     
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/j8y18lte/j8y18lte-vendor.mk)
