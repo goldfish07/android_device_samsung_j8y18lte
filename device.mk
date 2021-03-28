@@ -160,6 +160,20 @@ PRODUCT_PACKAGES += \
     libcurl \
     libgnss \
     libgnsspps
+
+# OMX
+PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
+    libmm-omxcore \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc \
+    libOmxSwVencHevc \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefrighthw
     
 # Wifi
 PRODUCT_PACKAGES += \
