@@ -126,7 +126,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl-qti \
     libbt-vendor
-    
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.1-service.clearkey \
+    android.hardware.drm@1.0-service.widevine \
+
+
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/j8y18lte/j8y18lte-vendor.mk)
 
