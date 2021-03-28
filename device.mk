@@ -85,7 +85,15 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
     tinymix
-    
+
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
+    camera.msm8953 \
+    libmm-qcamera \
+    Snap
+
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/j8y18lte/j8y18lte-vendor.mk)
 
