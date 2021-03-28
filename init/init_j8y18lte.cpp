@@ -67,6 +67,17 @@ void set_sim_info()
         
 }
 
+void set_dalvik_heap()
+{
+    /* For all variant */
+    property_set("dalvik.vm.heapstartsize", "14m");
+    property_set("dalvik.vm.heapgrowthlimit", "192m");
+    property_set("dalvik.vm.heapsize", "384m");
+    property_set("dalvik.vm.heaptargetutilization", "0.75");
+    property_set("dalvik.vm.heapminfree", "6m");
+    property_set("dalvik.vm.heapmaxfree", "8m");
+}
+
 void vendor_load_properties()
 {
     std::string bootloader = GetProperty("ro.bootloader", "");
@@ -103,6 +114,7 @@ void vendor_load_properties()
     }
 
     set_sim_info();
+    set_dalvik_heap();
 
     device = GetProperty("ro.product.device", "");
     LOG(ERROR) << "Found bootloader id '" << bootloader.c_str() << "' setting build properties for '" << device.c_str() << "' device\n";
