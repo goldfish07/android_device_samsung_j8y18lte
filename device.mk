@@ -167,6 +167,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service \
     android.hardware.power@1.0-impl
 
+# RenderScript
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+    
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
