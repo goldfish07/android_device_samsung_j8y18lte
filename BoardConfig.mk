@@ -168,6 +168,12 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
+# CNE
+BOARD_USES_QCNE := true
+
+# Keymaster
+TARGET_PROVIDES_KEYMASTER := true
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_j8y18lte
 
