@@ -293,6 +293,19 @@ PRODUCT_PACKAGES += \
 # USB HAL
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
+
+ # RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.2 \
+    android.hardware.radio.config@1.0 \
+    android.hardware.secure_element@1.0 \
+    librmnetctl \
+    libcnefeatureconfig \
+    libxml2 \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext   
     
 # VNDK-SP:
 PRODUCT_PACKAGES += \
