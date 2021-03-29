@@ -78,6 +78,7 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Qualcomm
 BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QC_TIME_SERVICES := true
 
 # Bluetooth
 BOARD_HAS_QCA_BT_ROME := true
@@ -98,6 +99,15 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
+
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
+# Media
+TARGET_USES_MEDIA_EXTENSIONS := true
+
+# Crypto
+TARGET_HW_DISK_ENCRYPTION := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_j8y18lte
