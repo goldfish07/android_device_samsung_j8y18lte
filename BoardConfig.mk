@@ -90,6 +90,9 @@ TARGET_TS_MAKEUP := true
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
+# Peripheral manager
+TARGET_PER_MGR_ENABLED := true
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_j8y18lte
 
