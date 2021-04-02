@@ -17,6 +17,6 @@ PRODUCT_MAKEFILES := \
 
 
 COMMON_LUNCH_CHOICES := \
-     lineage__j8y18lte-userdebug \
-     lineage__j8y18lte-eng \
-     lineage__j8y18lte-user
+     lineage_j8y18lte-userdebug \
+     lineage_j8y18lte-eng \
+     lineage_j8y18lte-user
