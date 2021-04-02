@@ -70,12 +70,12 @@ void set_sim_info()
 void set_dalvik_heap()
 {
     /* For all variant */
-    property_set("dalvik.vm.heapstartsize", "14m");
-    property_set("dalvik.vm.heapgrowthlimit", "192m");
-    property_set("dalvik.vm.heapsize", "384m");
-    property_set("dalvik.vm.heaptargetutilization", "0.75");
-    property_set("dalvik.vm.heapminfree", "6m");
-    property_set("dalvik.vm.heapmaxfree", "8m");
+    property_override("dalvik.vm.heapstartsize", "14m");
+    property_override("dalvik.vm.heapgrowthlimit", "192m");
+    property_override("dalvik.vm.heapsize", "384m");
+    property_override("dalvik.vm.heaptargetutilization", "0.75");
+    property_override("dalvik.vm.heapminfree", "6m");
+    property_override("dalvik.vm.heapmaxfree", "8m");
 }
 
 void vendor_load_properties()
