@@ -1,0 +1,26 @@
+# Fingerprint
+/sys/devices/virtual/fingerprint/fingerprint(/.*)?  u:object_r:sysfs_fingerprint:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service u:object_r:hal_fingerprint_default_exec:s0
+
+# Biometrics
+/data/biometrics(/.*)?             u:object_r:fingerprintd_data_file:s0
+/data/vendor/biometrics(/.*)?      u:object_r:fingerprintd_vendor_data_file:s0
+
+# Light
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.samsung		u:object_r:hal_light_default_exec:s0
+
+# HALs
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.clearkey		u:object_r:hal_drm_clearkey_exec:s0
+
+# Leds
+/sys/devices(/platform)?/soc/78b7000.i2c/i2c-3/3-0030/leds(/.*)?					u:object_r:sysfs_leds:s0
+
+# Camera
+/data/vendor/camera(/.*)?          u:object_r:camera_vendor_data_file:s0
+
+# Label
+/bt_firmware(/.*)?     u:object_r:bt_firmware_file:s0
+/dsp(/.*)?             u:object_r:tmp_file:s0
+/firmware(/.*)?        u:object_r:firmware_file:s0
+/persist(/.*)?         u:object_r:persist_file:s0
+

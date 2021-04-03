@@ -195,6 +195,10 @@ TARGET_OTA_ASSERT_DEVICE := j8y18lte
 # Properties
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
+# SELinux
+include device/qcom/sepolicy-legacy-um/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
+
 # Wi-Fi
 BOARD_HAVE_SAMSUNG_WIFI := true
 BOARD_HAS_QCOM_WLAN := true
