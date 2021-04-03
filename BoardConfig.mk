@@ -173,6 +173,7 @@ TARGET_PROVIDES_KEYMASTER := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_j8y18lte
+TARGET_RECOVERY_DEVICE_MODULES := libinit_j8y18lte
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(LOCAL_PATH)/config.fs
