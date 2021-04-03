@@ -195,7 +195,7 @@ TARGET_OTA_ASSERT_DEVICE := j8y18lte
 
 # Properties
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
-TARGET_VENDOR_PROP += $(LOCAL_PATH)/vendor.prop
+TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
