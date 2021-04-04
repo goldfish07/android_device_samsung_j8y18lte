@@ -328,6 +328,17 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0_system
 
+# For userdebug builds
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	ro.secure=0 \
+	ro.adb.secure=0 \
+	ro.debuggable=1 \
+	persist.sys.root_access=1 \
+	persist.service.adb.enable=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.sys.usb.config=mtp,adb
+    
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/j8y18lte/j8y18lte-vendor.mk)
 
