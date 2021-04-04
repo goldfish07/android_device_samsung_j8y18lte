@@ -110,6 +110,7 @@ vendor/bin/vendor_cmd_tool
 vendor/bin/wcnss_service
 vendor/bin/wvkprov
 vendor/bin/xtra-daemon
+vendor/bin/vendor.samsung.hardware.security.wsm@1.0-service
 
 
 vendor/etc/camera/A16QL_s5k3p8sp_module_info.xml
