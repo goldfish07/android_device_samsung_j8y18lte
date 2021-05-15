@@ -300,6 +300,9 @@ vendor/etc/wlan_common_rc
 vendor/etc/wlan_vendor_rc
 vendor/etc/workspaceFile.qwsp
 
+vendor/etc/cacert_location.pem
+vendor/etc/xtra_root_cert.pem
+
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
