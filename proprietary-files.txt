@@ -31,6 +31,7 @@ vendor/bin/hw/vendor.samsung.hardware.tlc.tima@1.0-service
 vendor/bin/hw/vendor.samsung.hardware.tlc.ucm@1.0-service
 vendor/bin/hw/vendor.samsung.hardware.vibrator@2.0-service
 vendor/bin/hw/vendor.samsung.hardware.wifi@2.0-service
+vendor/lib/hw/vendor.samsung.security.skeymaster@3.0-impl.so
 
 vendor/bin/adpl
 vendor/bin/adsprpcd
@@ -1313,6 +1314,7 @@ vendor/lib/vendor.samsung.hardware.camera.device@4.0.so
 vendor/lib/vendor.samsung.hardware.camera.provider@3.0.so
 vendor/lib/vendor.samsung.hardware.gnss@2.0.so
 vendor/lib/vendor.samsung.hardware.health@1.0.so
+vendor/lib/vendor.samsung.security.skeymaster@3.0_vendor.so
 vendor/lib/vendor.samsung.hardware.light@3.0.so
 vendor/lib/vendor.samsung.hardware.media.converter@1.0.so
 vendor/lib/vendor.samsung.hardware.miscpower@2.0.so
