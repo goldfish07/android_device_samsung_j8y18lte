@@ -120,6 +120,8 @@
 /(vendor|system/vendor)/bin/vendor\.samsung\.security\.sem@1\.0-service                            u:object_r:hal_sem_default_exec:s0
 /(vendor|system/vendor)/bin/vendor\.samsung\.security\.skpm@1\.0-service                           u:object_r:hal_skpm_default_exec:s0
 /(vendor|system/vendor)/bin/vendor\.samsung\.security\.wvkprov_server@1\.0-service                 u:object_r:hal_wvkprov_default_exec:s0
+/(vendor|system/vendor)/bin/vendor\.samsung\.hardware\.security\.wsm@1\.0-service                  u:object_r:hal_wsm_default_exec:s0
+/(vendor|system/vendor)/bin/vendor\.trustonic\.tee@1\.0-service                                    u:object_r:hal_tee_default_exec:s0
 
 # Rootfs
 /firmware(/.*)?    u:object_r:firmware_file:s0
