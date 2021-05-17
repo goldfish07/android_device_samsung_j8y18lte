@@ -317,10 +317,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext   
     
-# VNDK-SP:
-PRODUCT_PACKAGES += \
-    vndk-sp
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
