@@ -150,6 +150,16 @@ USE_OPENGL_RENDERER := true
 TARGET_USES_HWC2 := true
 TARGET_USES_GRALLOC1 := true
 
+# Dexpreopt
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
+WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
+
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
