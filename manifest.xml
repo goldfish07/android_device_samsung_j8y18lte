@@ -118,6 +118,7 @@
         <interface>
             <name>IHealth</name>
             <instance>default</instance>
+            <instance>exthealth</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -255,6 +256,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.vibrator</name>
+        <transport arch="32+64">passthrough</transport>
         <transport>hwbinder</transport>
         <version>1.3</version>
         <interface>
