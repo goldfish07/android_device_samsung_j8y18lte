@@ -1,1 +1,8 @@
 allow init omr_file:dir mounton;
+allow init tee_device:chr_file rw_file_perms;
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init sysfs:file setattr;
+allow init vendor_file:file execute;
+
+ allow init shell_exec:file execute_no_trans;
+  allow init vendor_shell_exec:file execute_no_trans;
