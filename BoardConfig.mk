@@ -18,7 +18,7 @@ LOCAL_PATH := device/samsung/j8y18lte
 BUILD_TOP := $(shell pwd)
 BUILD_BROKEN_DUP_RULES := true
 
-# CPU
+# Architecture 
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := armeabi-v7a
@@ -77,11 +77,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
-# Qualcomm
-BOARD_USES_QCOM_HARDWARE := true
-BOARD_USES_QC_TIME_SERVICES := true
-
-# APEX image
+# APEX Image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Audio
@@ -124,7 +120,6 @@ AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := false
 #AUDIO_FEATURE_ENABLED_VOICE_CONCURRENCY := true
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 
-
 # Bluetooth
 BOARD_HAS_QCA_BT_ROME := true
 BOARD_HAVE_BLUETOOTH := true
@@ -138,6 +133,9 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 TARGET_TS_MAKEUP := true
+
+# CNE
+BOARD_USES_QCNE := true
 
 # Display
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
@@ -160,28 +158,6 @@ ifeq ($(HOST_OS),linux)
 endif
 WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 
-# RIL
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
-
-# Peripheral manager
-TARGET_PER_MGR_ENABLED := true
-
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
-# Media
-TARGET_USES_MEDIA_EXTENSIONS := true
-
-# CNE
-BOARD_USES_QCNE := true
-
-# Keymaster
-TARGET_PROVIDES_KEYMASTER := true
-
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_j8y18lte
-TARGET_RECOVERY_DEVICE_MODULES := libinit_j8y18lte
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(LOCAL_PATH)/config.fs
 
@@ -189,21 +165,21 @@ TARGET_FS_CONFIG_GEN := $(LOCAL_PATH)/config.fs
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := $(LOCAL_PATH)/compatibility_matrix.xml
 
-# Recovery
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.recovery.qcom
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_j8y18lte
+TARGET_RECOVERY_DEVICE_MODULES := libinit_j8y18lte
 
-# Treble
-BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-PRODUCT_FULL_TREBLE_OVERRIDE := true
+# Keymaster
+TARGET_PROVIDES_KEYMASTER := true
 
-# Vendor separation
-TARGET_COPY_OUT_VENDOR := vendor
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-PRODUCT_VENDOR_MOVE_ENABLED := true
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
 
-# VNDK
-BOARD_VNDK_VERSION := current
-BOARD_VNDK_RUNTIME_DISABLE := true
+# Media
+TARGET_USES_MEDIA_EXTENSIONS := true
+
+# Peripheral manager
+TARGET_PER_MGR_ENABLED := true
 
 # Product
 TARGET_COPY_OUT_PRODUCT := system/product
@@ -217,9 +193,32 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
 TARGET_ODM_PROP := $(LOCAL_PATH)/odm.prop
 
+# Qualcomm
+BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QC_TIME_SERVICES := true
+
+# Recovery
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.recovery.qcom
+
+# RIL
+TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+
 # SELinux
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
+
+# Treble
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+
+# Vendor separation
+TARGET_COPY_OUT_VENDOR := vendor
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+PRODUCT_VENDOR_MOVE_ENABLED := true
+
+# VNDK
+BOARD_VNDK_VERSION := current
+BOARD_VNDK_RUNTIME_DISABLE := true
 
 # Wi-Fi
 BOARD_HAVE_SAMSUNG_WIFI := true
