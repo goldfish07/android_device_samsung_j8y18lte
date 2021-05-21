@@ -1377,6 +1377,7 @@ vendor/firmware/Tfa9896.cnt
 -system/product/app/remotesimlockservice/remotesimlockservice.apk
 
 system/lib/libsecaudiocoreutils.so
+system/lib/lib_SoundAlive_AlbumArt_ver105.so
 system/lib/lib_SoundAlive_3DPosition_ver202.so
 system/lib/lib_SoundAlive_play_plus_ver210.so
 system/lib/lib_SoundBooster_ver900.so
