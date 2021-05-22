@@ -79,7 +79,7 @@ vendor/bin/init.qti.can.sh
 vendor/bin/init.qti.fm.sh
 vendor/bin/init.qti.ims.sh
 vendor/bin/init.qti.qseecomd.sh
-vendor/bin/iof_vendor
+#vendor/bin/iof_vendor
 vendor/bin/ipacm
 vendor/bin/ipacm-diag
 vendor/bin/irsc_util
@@ -157,7 +157,7 @@ vendor/etc/init/android.hardware.keymaster@3.0-service.rc
 vendor/etc/init/android.hardware.media.omx@1.0-service_qcom.rc
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/hostapd.android.rc
-vendor/etc/init/icd_over_five_vendor.rc
+#vendor/etc/init/icd_over_five_vendor.rc
 vendor/etc/init/init.qti.fm.rc
 vendor/etc/init/init.time_daemon.rc
 vendor/etc/init/init.vendor.onebinary.rc
