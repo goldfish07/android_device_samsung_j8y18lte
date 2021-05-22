@@ -1010,6 +1010,7 @@ vendor/lib/libmmosal_proprietary.so
 vendor/lib/libmm-qcamera.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
+vendor/lib/libMOTION.so
 vendor/lib/libmulawdec.so
 vendor/lib/libnbaio_mono.so
 vendor/lib/libnetfilter_conntrack.so
