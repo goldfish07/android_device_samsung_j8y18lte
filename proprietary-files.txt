@@ -2,6 +2,7 @@ vendor/app/mcRegistry/07010000000000000000000000000000.tlbin
 
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/bin/hw/android.hardware.gnss@2.0-service-qti
+vendor/bin/hw/android.hardware.keymaster@3.0-service
 vendor/bin/hw/capabilityconfigstoretest
 vendor/bin/hw/macloader
 vendor/bin/hw/mfgloader
@@ -32,7 +33,6 @@ vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service
 #vendor/bin/hw/vendor.samsung.hardware.tlc.ucm@1.0-service
 #vendor/bin/hw/vendor.samsung.hardware.vibrator@2.0-service
 #vendor/bin/hw/vendor.samsung.hardware.wifi@2.0-service
-vendor/lib/hw/vendor.samsung.security.skeymaster@3.0-impl.so
 
 vendor/bin/adpl
 vendor/bin/adsprpcd
@@ -153,6 +153,7 @@ vendor/etc/data/netmgr_config.xml
 
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/etc/init/android.hardware.gnss@2.0-service-qti.rc
+vendor/etc/init/android.hardware.keymaster@3.0-service.rc
 vendor/etc/init/android.hardware.media.omx@1.0-service_qcom.rc
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/hostapd.android.rc
@@ -316,6 +317,7 @@ vendor/lib/egl/libQTapGLES.so
 
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/hw/android.hardware.gnss@2.0-impl-qti.so
+vendor/lib/hw/android.hardware.keymaster@3.0-impl.so
 vendor/lib/hw/audio.primary.msm8953.so
 vendor/lib/hw/camera.msm8953.so
 vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
@@ -342,6 +344,7 @@ vendor/lib/hw/vulkan.msm8953.so
 #vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
 #vendor/lib/hw/vendor.samsung.hardware.camera.provider@3.0-impl.so
 #vendor/lib/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
+vendor/lib/hw/vendor.samsung.security.skeymaster@3.0-impl.so
 #vendor/lib/hw/vendor.samsung.hardware.light@3.0-impl.so
 #endor/lib/hw/vendor.samsung.hardware.snap@1.1-impl.so
 
