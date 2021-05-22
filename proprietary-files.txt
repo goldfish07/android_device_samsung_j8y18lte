@@ -32,7 +32,7 @@ vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service
 #vendor/bin/hw/vendor.samsung.hardware.tlc.payment@1.0-service
 #vendor/bin/hw/vendor.samsung.hardware.tlc.tima@1.0-service
 #vendor/bin/hw/vendor.samsung.hardware.tlc.ucm@1.0-service
-#vendor/bin/hw/vendor.samsung.hardware.vibrator@2.0-service
+vendor/bin/hw/vendor.samsung.hardware.vibrator@2.0-service
 #vendor/bin/hw/vendor.samsung.hardware.wifi@2.0-service
 
 vendor/bin/adpl
@@ -190,6 +190,7 @@ vendor/etc/init/android.hardware.health@2.0-service.samsung.rc
 vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_qcom.rc
 vendor/etc/init/wsm-service.rc
+vendor/etc/init/vendor.samsung.hardware.vibrator@2.0-service.rc
 
 vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/perfboostsconfig.xml
@@ -1338,7 +1339,7 @@ vendor/lib/vendor.samsung.hardware.security.securestorage@3.0.so
 #vendor/lib/vendor.samsung.hardware.tlc.payment@1.0-impl.so
 #vendor/lib/vendor.samsung.hardware.tlc.tima@1.0-impl.so
 #vendor/lib/vendor.samsung.hardware.tlc.ucm@1.0-impl.so
-#vendor/lib/vendor.samsung.hardware.vibrator@2.0.so
+vendor/lib/vendor.samsung.hardware.vibrator@2.0.so
 #vendor/lib/vendor.samsung.hardware.wifi.hostapd@2.0.so
 #vendor/lib/vendor.samsung.hardware.wifi.supplicant@2.0.so
 #vendor/lib/vendor.samsung.hardware.wifi@2.0.so
