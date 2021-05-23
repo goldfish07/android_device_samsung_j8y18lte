@@ -1389,6 +1389,22 @@ lib/lib_SoundAlive_play_plus_ver210.so
 lib/lib_SoundBooster_ver900.so
 lib/libprofileparamstorage.so
 
+lib/extractors/libmmparserextractor.so
+lib/extractors/libsaacextractor.so
+lib/extractors/libsaviextractor.so
+lib/extractors/libsecamrextractor.so
+lib/extractors/libsecmidiextractor.so
+lib/extractors/libsecmkvextractor.so
+lib/extractors/libsecmp3extractor.so
+lib/extractors/libsecmp4extractor.so
+lib/extractors/libsecmpeg2extractor.so
+lib/extractors/libsecoggextractor.so
+lib/extractors/libsecwavextractor.so
+lib/extractors/libsflacextractor.so
+lib/extractors/libsflvextractor.so
+lib/extractors/libsmkvextractor.so
+lib/extractors/libswmfextractor.so
+
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml
