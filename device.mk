@@ -271,12 +271,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
     $(LOCAL_PATH)/seccomp_policy/mediaextractor_sec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor_sec.policy 
 
-# Sensors
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service \
-    libsensorndkbridge
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/apdr.conf 
 
