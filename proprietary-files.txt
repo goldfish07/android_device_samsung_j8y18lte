@@ -429,6 +429,7 @@ vendor/lib/libcapiv2vop.so
 vendor/lib/libCB.so
 vendor/lib/libcdsp_default_listener.so
 vendor/lib/libcdsprpc.so
+vendor/lib/libchromaflash.so
 vendor/lib/libchromatix_csidtg_common.so
 vendor/lib/libchromatix_csidtg_cpp_preview.so
 vendor/lib/libchromatix_csidtg_postproc.so
@@ -975,6 +976,7 @@ vendor/lib/libmmcamera_paaf_lib.so
 vendor/lib/libmmcamera_pdaf.so
 vendor/lib/libmmcamera_pdafcamif.so
 vendor/lib/libmmcamera_ppbase_module.so
+vendor/lib/libmmcamera_ppeiscore.so
 vendor/lib/libmmcamera_qtech_f3l8yam_eeprom.so
 vendor/lib/libmmcamera_qtech_f5670bq_eeprom.so
 vendor/lib/libmmcamera_quadracfa.so
@@ -1049,6 +1051,7 @@ vendor/lib/libOmxVenc.so
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libOpenCL.so
 vendor/lib/libOpenCv.camera.samsung.so
+vendor/lib/liboptizoom.so
 vendor/lib/libpa.so
 vendor/lib/libpdmapper.so
 vendor/lib/libpdnotifier.so
@@ -1125,6 +1128,7 @@ vendor/lib/libsecure_storage.so
 vendor/lib/libsecureui.so
 vendor/lib/libSecureUILib.so
 vendor/lib/libsecureui_svcsock.so
+vendor/lib/libseemore.so
 vendor/lib/libsensorlistener.so
 vendor/lib/libsensorndkbridge.so
 vendor/lib/libsi.so
@@ -1176,7 +1180,9 @@ vendor/lib/libtlc_comm_atn.so
 vendor/lib/libtlc_comm_iccc.so
 vendor/lib/libtlc_direct_comm_atn.so
 vendor/lib/libtlc_direct_comm_iccc.so
+vendor/lib/libtrueportrait.so
 vendor/lib/libtzdrmgenprov.so
+vendor/lib/libubifocus.so
 vendor/lib/libUBWC.so
 vendor/lib/libucm_tlc_comm.so
 vendor/lib/libucm_tlc_direct_comm.so
