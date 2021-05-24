@@ -1326,12 +1326,12 @@ vendor/lib/vendor.trustonic.teeregistry@1.0.so
 #vendor/lib/vendor.samsung.hardware.audio@1.0.so
 #vendor/lib/vendor.samsung.hardware.base@1.0.so
 vendor/lib/vendor.samsung.hardware.biometrics.fingerprint@3.0.so
-#vendor/lib/vendor.samsung.hardware.bluetooth@2.0.so
+vendor/lib/vendor.samsung.hardware.bluetooth@2.0.so
 #vendor/lib/vendor.samsung.hardware.camera.device@1.0.so
 #vendor/lib/vendor.samsung.hardware.camera.device@4.0.so
 #vendor/lib/vendor.samsung.hardware.camera.provider@3.0.so
-#vendor/lib/vendor.samsung.hardware.gnss@2.0.so
-#vendor/lib/vendor.samsung.hardware.health@1.0.so
+vendor/lib/vendor.samsung.hardware.gnss@2.0.so
+vendor/lib/vendor.samsung.hardware.health@1.0.so
 vendor/lib/vendor.samsung.security.skeymaster@3.0_vendor.so
 #vendor/lib/vendor.samsung.hardware.light@3.0.so
 #vendor/lib/vendor.samsung.hardware.media.converter@1.0.so
