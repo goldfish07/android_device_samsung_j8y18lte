@@ -67,7 +67,12 @@ BOARD_PERSISTIMAGE_PARTITION_SIZE := 1048576 #31
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/dsp:/dsp \
     /vendor/firmware_mnt:/firmware \
-    /mnt/vendor/persist:/persist
+    /mnt/vendor/persist:/persist \
+    /mnt/vendor/efs:/efs
+
+# Root Folders
+BOARD_ROOT_EXTRA_FOLDERS := config omr efs
+
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
