@@ -1392,6 +1392,10 @@ vendor/firmware/Tfa9896.cnt
 -product/app/DynamicDDSService/DynamicDDSService.apk
 -product/app/remotesimlockservice/remotesimlockservice.apk
 
+lib/fm_helium.so
+lib/libfm-hci.so
+lib/vendor.qti.hardware.fm@1.0.so
+
 lib/libsecaudiocoreutils.so
 lib/lib_SoundAlive_AlbumArt_ver105.so
 lib/lib_SoundAlive_3DPosition_ver202.so
