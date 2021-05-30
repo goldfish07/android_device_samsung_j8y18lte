@@ -327,6 +327,7 @@ vendor/lib/hw/android.hardware.sensors@1.0-impl.so
 vendor/lib/hw/audio.primary.msm8953.so
 vendor/lib/hw/camera.msm8953.so
 vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
+vendor/lib/hw/fingerprint.default.so
 vendor/lib/hw/gatekeeper.mdfpp.so
 vendor/lib/hw/gatekeeper.msm8953.so
 vendor/lib/hw/gralloc.msm8953.so
