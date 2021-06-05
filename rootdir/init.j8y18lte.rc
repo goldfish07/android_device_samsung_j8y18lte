@@ -1,3 +1,9 @@
+on init
+
+# Disable Bloatwares present in ODM
+	mount none /odm/lost+found /odm/app bind
+	mount none /odm/lost+found /odm/priv-app bind
+
 on post-fs-data
 
 #SystemFramework
