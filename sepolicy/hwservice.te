@@ -7,3 +7,5 @@ type hal_secure_storage_daemon_hwservice, hwservice_manager_type;
 type hal_sem_hwservice, hwservice_manager_type;
 type hal_skpm_hwservice, hwservice_manager_type;
 type hal_wvkprov_hwservice, hwservice_manager_type;
+type hal_wsm_hwservice, hwservice_manager_type;
+type hal_tee_hwservice, hwservice_manager_type;
