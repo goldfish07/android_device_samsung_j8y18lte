@@ -169,6 +169,7 @@ vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/init/init-qcril-data.rc
 vendor/etc/init/ipacm.rc
 vendor/etc/init/ipacm-diag.rc
+vendor/etc/init/lockscreen.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/pa_daemon_qsee.rc
 vendor/etc/init/secure_storage_daemon_qsee.rc
