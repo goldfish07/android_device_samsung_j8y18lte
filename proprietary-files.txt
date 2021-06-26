@@ -5,6 +5,7 @@ vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/bin/hw/android.hardware.gnss@2.0-service-qti
 vendor/bin/hw/android.hardware.keymaster@3.0-service
 vendor/bin/hw/android.hardware.sensors@1.0-service
+vendor/bin/hw/android.hardware.wifi@1.0-service
 vendor/bin/hw/capabilityconfigstoretest
 vendor/bin/hw/macloader
 vendor/bin/hw/mfgloader
@@ -196,6 +197,7 @@ vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_qcom.rc
 vendor/etc/init/wsm-service.rc
 vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.rc
+vendor/etc/init/vendor.samsung.hardware.light@3.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.vibrator@2.0-service.rc
 
 vendor/etc/perf/commonresourceconfigs.xml
@@ -1338,7 +1340,7 @@ vendor/lib/vendor.samsung.hardware.bluetooth@2.0.so
 vendor/lib/vendor.samsung.hardware.gnss@2.0.so
 vendor/lib/vendor.samsung.hardware.health@1.0.so
 vendor/lib/vendor.samsung.security.skeymaster@3.0_vendor.so
-#vendor/lib/vendor.samsung.hardware.light@3.0.so
+vendor/lib/vendor.samsung.hardware.light@3.0.so
 #vendor/lib/vendor.samsung.hardware.media.converter@1.0.so
 #vendor/lib/vendor.samsung.hardware.miscpower@2.0.so
 vendor/lib/vendor.samsung.hardware.radio.bridge@2.0_vendor.so
