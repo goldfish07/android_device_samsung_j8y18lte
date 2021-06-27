@@ -15,12 +15,13 @@
 LOCAL_PATH := device/samsung/j8y18lte
 
 # Inherit from those products, Most specific first.
-$(call inherit-product, $(LOCAL_PATH)/device.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit common Lineage phone.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := lineage_j8y18lte
