@@ -26,7 +26,7 @@ vendor/bin/hw/android.hardware.health@2.0-service.samsung
 #vendor/bin/hw/vendor.samsung.hardware.base@1.0-service
 vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service
 #vendor/bin/hw/vendor.samsung.hardware.camera.provider@3.0-service
-#vendor/bin/hw/vendor.samsung.hardware.light@3.0-service
+vendor/bin/hw/vendor.samsung.hardware.light@3.0-service
 #vendor/bin/hw/vendor.samsung.hardware.media.converter@1.0-service
 #vendor/bin/hw/vendor.samsung.hardware.miscpower@2.0-service
 #vendor/bin/hw/vendor.samsung.hardware.snap@1.1-service
@@ -193,6 +193,7 @@ vendor/etc/init/vendor.qti.tftp.rc
 vendor/etc/init/vendor.trustonic.tee@1.0-service.rc
 vendor/etc/init/vendor.trustonic.teeregistry@1.0-service.rc
 vendor/etc/init/android.hardware.health@2.0-service.samsung.rc
+vendor/etc/init/android.hardware.wifi@1.0-service.rc
 vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_qcom.rc
 vendor/etc/init/wsm-service.rc
@@ -356,7 +357,7 @@ vendor/lib/hw/vulkan.msm8953.so
 #vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
 #vendor/lib/hw/vendor.samsung.hardware.camera.provider@3.0-impl.so
 #vendor/lib/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
-vendor/lib/hw/vendor.samsung.security.skeymaster@3.0-impl.so
+#vendor/lib/hw/vendor.samsung.security.skeymaster@3.0-impl.so
 #vendor/lib/hw/vendor.samsung.hardware.light@3.0-impl.so
 #endor/lib/hw/vendor.samsung.hardware.snap@1.1-impl.so
 
