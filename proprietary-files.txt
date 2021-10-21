@@ -352,7 +352,7 @@ vendor/lib/hw/vulkan.msm8953.so
 #vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
 #vendor/lib/hw/vendor.samsung.hardware.camera.provider@3.0-impl.so
 #vendor/lib/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
-vendor/lib/hw/vendor.samsung.security.skeymaster@3.0-impl.so
+#vendor/lib/hw/vendor.samsung.security.skeymaster@3.0-impl.so
 #vendor/lib/hw/vendor.samsung.hardware.light@3.0-impl.so
 #endor/lib/hw/vendor.samsung.hardware.snap@1.1-impl.so
 
@@ -1334,7 +1334,7 @@ vendor/lib/vendor.samsung.hardware.bluetooth@2.0.so
 #vendor/lib/vendor.samsung.hardware.camera.provider@3.0.so
 vendor/lib/vendor.samsung.hardware.gnss@2.0.so
 vendor/lib/vendor.samsung.hardware.health@1.0.so
-vendor/lib/vendor.samsung.security.skeymaster@3.0_vendor.so
+#vendor/lib/vendor.samsung.security.skeymaster@3.0_vendor.so
 #vendor/lib/vendor.samsung.hardware.light@3.0.so
 #vendor/lib/vendor.samsung.hardware.media.converter@1.0.so
 #vendor/lib/vendor.samsung.hardware.miscpower@2.0.so
