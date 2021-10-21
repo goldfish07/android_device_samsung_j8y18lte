@@ -1,0 +1,7 @@
+on post-fs-data
+    wait /data/vendor
+    mkdir /data/vendor/gatekeeper 0770 system system
+    mkdir /data/vendor/biometrics 0770 system system
+
+on property:vendor.sys.listeners.registered=*
+    setprop sys.listeners.registered ${vendor.sys.listeners.registered}
