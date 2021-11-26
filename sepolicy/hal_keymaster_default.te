@@ -21,3 +21,4 @@ get_prop(hal_keymaster_default, tzdaemon_prop)
 get_prop(hal_keymaster_default, vendor_tztsdaemon_prop)
 set_prop(hal_keymaster_default, ctl_start_prop)
 set_prop(hal_keymaster_default, dumpstate_options_prop)
+

@@ -12,3 +12,4 @@ allow hal_skpm_default mnt_vendor_file:dir r_dir_perms;
 
 allow hal_skpm_default sec_efs_file:dir create_dir_perms;
 allow hal_skpm_default sec_efs_file:file create_file_perms;
+

@@ -17,3 +17,4 @@ allow hal_proca_default dumpstate:fd use;
 allow hal_proca_default rootfs:file r_file_perms;
 
 r_dir_file(hal_proca_default, oemfs)
+
