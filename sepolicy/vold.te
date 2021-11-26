@@ -1,1 +1,2 @@
-allowxperm vold loop_device:blk_file ioctl LOOP_GET_STATUS64;
+ allowxperm vold loop_device:blk_file ioctl LOOP_GET_STATUS64;
+ 

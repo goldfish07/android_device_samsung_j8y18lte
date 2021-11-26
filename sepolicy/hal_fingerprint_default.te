@@ -19,3 +19,4 @@ allow hal_fingerprint_default biometrics_vendor_data_file:file create_file_perms
 
 allow hal_fingerprint_default vendor_data_file:dir create_dir_perms;
 allow hal_fingerprint_default vendor_data_file:file create_file_perms;
+

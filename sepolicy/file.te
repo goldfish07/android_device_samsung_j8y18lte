@@ -29,8 +29,8 @@ type wifi_efs_file, file_type, mlstrustedobject;
 # proc
 type proc_default_smp_affinity, fs_type, proc_type;
 type proc_swappiness, fs_type, proc_type;
-type hal_wsm_default_exec, exec_type, file_type, vendor_file_type;
 
+type persist, file_type;
 # rootfs
 type omr_file, file_type, mlstrustedobject;
 
@@ -44,3 +44,4 @@ type sysfs_fpc, fs_type, sysfs_type;
 type sysfs_lcd_writable, fs_type, sysfs_type;
 type sysfs_mdnie_writable, fs_type, sysfs_type;
 type sysfs_tsp, fs_type, sysfs_type;
+
