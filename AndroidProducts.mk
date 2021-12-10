@@ -13,10 +13,10 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_j8y18lte.mk
+    $(LOCAL_DIR)/mokee_j8y18lte.mk
 
 
 COMMON_LUNCH_CHOICES := \
-     lineage_j8y18lte-userdebug \
-     lineage_j8y18lte-eng \
-     lineage_j8y18lte-user
+     mokee_j8y18lte-userdebug \
+     mokee_j8y18lte-eng \
+     mokee_j8y18lte-user
