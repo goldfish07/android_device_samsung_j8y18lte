@@ -20,10 +20,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Inherit common Lineage phone.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/colt/config/common_full_phone.mk)
+
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := lineage_j8y18lte
+PRODUCT_NAME := colt_j8y18lte
 PRODUCT_DEVICE := j8y18lte
 PRODUCT_MODEL := SM-J810G
 PRODUCT_BRAND := samsung
