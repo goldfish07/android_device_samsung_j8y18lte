@@ -66,7 +66,10 @@ extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
 
 # Fix proprietary blobs
-#BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor
+BLOB_ROOT="${LINEAGE_ROOT}/vendor/${VENDOR}/${DEVICE}/proprietary"
+patchelf --replace-needed "libkeymaster_portable.so" "libkeymaster_portable-v29.so" "${BLOB_ROOT}/vendor/lib/libkeymaster3device.so"
+patchelf --replace-needed "libpuresoftkeymasterdevice.so" "libpuresoftkeymasterdevice-v29.so" "${BLOB_ROOT}/vendor/lib/libkeymaster3device.so"
+
 #patchelf --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-fl26.so $BLOB_ROOT/lib/libsec-ril.so
 #patchelf --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-fl26.so $BLOB_ROOT/lib/libsec-ril-dsds.so
 
