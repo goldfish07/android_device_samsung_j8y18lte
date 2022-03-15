@@ -1168,7 +1168,7 @@ vendor/lib/libstagefright_soft_ac4dec.so
 vendor/lib/libstagefright_soft_ddpdec.so
 #vendor/lib/libstagefright_softomx.so
 vendor/lib/libstagefright_soft_qtiflacdec.so
-vendor/lib/libstagefright_xmlparser.so
+#vendor/lib/libstagefright_xmlparser.so
 vendor/lib/libStDrvInt.so
 vendor/lib/libstr_capture_core.so
 vendor/lib/libstr_capture_interface.so
