@@ -173,3 +173,6 @@ ro.kernel.qemu=0
 net.bt.name=Android
 ro.vendor.qti.va_aosp.support=1
 
+# read DS/SS property
+import /efs/factory.prop *
+
