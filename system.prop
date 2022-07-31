@@ -156,21 +156,6 @@ ro.cmc.version=2.0
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
-ro.treble.enabled=true
-ro.build.version.sem=2901
-ro.build.version.sep=110000
-ro.system.build.version.sehi=2901
-ro.build.selinux=1
-ro.config.knox=v30
-ro.config.iccc_version=3.0
-ro.config.dmverity=G
-ro.config.tima=1
-ro.config.timaversion=3.0
-ro.config.timaversion_info=Knox3.4_S.R.
-ro.config.knox.ucm=1
-ro.config.kap=true
-ro.kernel.qemu=0
-net.bt.name=Android
 ro.vendor.qti.va_aosp.support=1
 
 # read DS/SS property
