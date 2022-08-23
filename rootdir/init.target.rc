@@ -61,7 +61,7 @@ on fs
 
     wait /dev/block/bootdevice/by-name/efs
     mkdir /mnt/vendor/efs
-    mount ext4 /dev/block/bootdevice/by-name/efs /mnt/vendor/efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
+
     chown system radio /mnt/vendor/efs
     chmod 0771 /mnt/vendor/efs
     restorecon -R /mnt/vendor/efs
