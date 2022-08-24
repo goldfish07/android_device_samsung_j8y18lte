@@ -162,7 +162,8 @@ PRODUCT_PACKAGES += \
     gps.msm8953 \
     libcurl \
     libgnss \
-    libgnsspps
+    libgnsspps \
+    libjson
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
