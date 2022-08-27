@@ -60,13 +60,6 @@ void property_override_dual(char const system_prop[],
     property_override(vendor_prop, value);
 }
 
-void set_sim_info()
-{
-  
-    property_override("rild.libpath2", "/vendor/lib/libsec-ril-dsds.so");
-        
-}
-
 void set_dalvik_heap()
 {
     /* For all variant */
@@ -113,7 +106,6 @@ void vendor_load_properties()
         property_override_dual("ro.product.device", "ro.vendor.product.device", "j8y18lte");
     }
 
-    set_sim_info();
     set_dalvik_heap();
 
     device = GetProperty("ro.product.device", "");
