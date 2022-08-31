@@ -192,7 +192,7 @@ vendor/etc/init/vendor.trustonic.teeregistry@1.0-service.rc
 vendor/etc/init/android.hardware.health@2.0-service.samsung.rc
 vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_qcom.rc
-vendor/etc/init/wsm-service.rc
+#vendor/etc/init/wsm-service.rc
 vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.vibrator@2.0-service.rc
 
