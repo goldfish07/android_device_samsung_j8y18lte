@@ -231,7 +231,8 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy \
+    device/samsung_slsi/tee/mobicore/common
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
