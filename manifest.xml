@@ -537,6 +537,15 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>vendor.samsung.hardware.security.securestorage</name>
+        <transport>hwbinder</transport>
+        <version>3.0</version>
+        <interface>
+            <name>ISehSecureStorage</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>vendor.samsung.hardware.security.wsm</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
