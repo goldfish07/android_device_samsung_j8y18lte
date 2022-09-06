@@ -11,6 +11,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <bool name="config_hideRecoveryUpdate">true</bool>
+    
+        <!--
+        Optional placeholders replaced at runtime:
+          {device} - Device name
+          {type} - Build type
+    -->
+    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/goldfish07/ROM_OTA/11/lineage-18.0-j8y18lte.json</string>
+    <string name="menu_changelog_url" translatable="false">https://raw.githubusercontent.com/goldfish07/ROM_OTA/11/changelogs/lineage-18.0-j8y18lte.txt</string>
 </resources>
