@@ -358,7 +358,7 @@ vendor/lib/hw/vulkan.msm8953.so
 #vendor/lib/hw/vendor.samsung.hardware.camera.provider@3.0-impl.so
 #vendor/lib/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
 #vendor/lib/hw/vendor.samsung.security.skeymaster@3.0-impl.so
-#vendor/lib/hw/vendor.samsung.hardware.light@3.0-impl.so
+vendor/lib/hw/vendor.samsung.hardware.light@3.0-impl.so
 #endor/lib/hw/vendor.samsung.hardware.snap@1.1-impl.so
 
 vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so
