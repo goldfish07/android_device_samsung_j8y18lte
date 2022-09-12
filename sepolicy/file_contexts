@@ -120,6 +120,9 @@
 /(vendor|system/vendor)/bin/vendor\.samsung\.security\.sem@1\.0-service                            u:object_r:hal_sem_default_exec:s0
 /(vendor|system/vendor)/bin/vendor\.samsung\.security\.skpm@1\.0-service                           u:object_r:hal_skpm_default_exec:s0
 /(vendor|system/vendor)/bin/vendor\.samsung\.security\.wvkprov_server@1\.0-service                 u:object_r:hal_wvkprov_default_exec:s0
+/(vendor|system/vendor)/bin/secril_config_svc    						     u:object_r:secril_config_svc_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.trustonic\.tee@1\.0-service 				     u:object_r:hal_tee_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.trustonic\.teeregistry@1\.0-service 			     u:object_r:hal_teeregistry_default_exec:s0
 
 # Rootfs
 /persist(/.*)?    u:object_r:persist_file:s0

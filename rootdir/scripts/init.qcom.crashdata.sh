@@ -1,5 +1,5 @@
-
-# Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
+#!/vendor/bin/sh
+# Copyright (c) 2017, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -12,7 +12,7 @@
 #       with the distribution.
 #     * Neither the name of The Linux Foundation nor the names of its
 #       contributors may be used to endorse or promote products derived
-#       from this software without specific prior written permission.
+#      from this software without specific prior written permission.
 #
 # THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
@@ -26,40 +26,23 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-#
 
-import /vendor/etc/init/hw/init.samsung.bsp.rc
+abnormalcnt="persist.vendor.crash.cnt"
 
-on early-init
-    mkdir /mnt/vendor/efs 0771 radio system
-    mkdir /mnt/vendor/persist 0771 root system
+abnormal_cnt=`getprop $abnormalcnt`
+crash_detect=`getprop persist.vendor.crash.detect`
 
-on init
-    symlink /dev/block/bootdevice/by-name/steady  /dev/block/steady
-    symlink /dev/block/bootdevice/by-name/persistent  /dev/block/persistent
+if [ "$abnormal_cnt" = "" ]
+then
+setprop $abnormalcnt 0
+fi
 
-# Create carrier folder for HiddenMenu
-on post-fs
-    mkdir /efs/carrier 0755 system system
-    restorecon_recursive /efs
-
-    restorecon_recursive /mnt/vendor/efs
-    chown radio system /mnt/vendor/efs
-    chmod 0771 /mnt/vendor/efs
-
-on boot
-	# sec abc
-    chown system radio /sys/class/sec/sec_abc/enabled
-    chmod 0664 /sys/class/sec/sec_abc/enabled
-    chown system radio /sys/class/sec/sec_abc/log
-    chmod 0664 /sys/class/sec/sec_abc/log
-    chown system radio /sys/class/sec/sec_abc_hub/enable
-    chmod 0664 /sys/class/sec/sec_abc_hub/enable
-    chown system radio /sys/class/sec/sec_abc_hub/bootc_offset
-    chmod 0664 /sys/class/sec/sec_abc_hub/bootc_offset
-
-    # Permission for nfc driver
-    chmod 0660 /dev/sec-nfc
-    chown nfc nfc /dev/sec-nfc
-    chmod 0660 /dev/pn547
-    chown nfc nfc /dev/pn547
+if [ "$crash_detect" = "true" ]
+then
+abnormal_cnt=`expr $abnormal_cnt + 1`
+setprop $abnormalcnt $abnormal_cnt
+elif [ "$crash_detect" = "false" ];then
+setprop persist.vendor.crash.detect true
+else
+setprop persist.vendor.crash.detect true
+fi

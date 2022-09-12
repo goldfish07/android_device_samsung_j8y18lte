@@ -1,5 +1,6 @@
+#! /vendor/bin/sh
 
-# Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2014, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -28,38 +29,29 @@
 #
 #
 
-import /vendor/etc/init/hw/init.samsung.bsp.rc
+dir0=/data
+trigger_file=$dir0/ims_disabled
+ims_disabled=`getprop persist.vendor.ims.disabled`
+target=`getprop ro.build.product`
 
-on early-init
-    mkdir /mnt/vendor/efs 0771 radio system
-    mkdir /mnt/vendor/persist 0771 root system
+#if [ ! -e $trigger_file ]; then
+#   for future use in doing conditional debugging
+#else
+#
+#fi
+echo "$ims_disabled"
+echo "$target"
 
-on init
-    symlink /dev/block/bootdevice/by-name/steady  /dev/block/steady
-    symlink /dev/block/bootdevice/by-name/persistent  /dev/block/persistent
+if [ "$ims_disabled" = "0" ]; then
+    echo "ims will be enabled"
+    setprop vendor.service.qti.ims.enabled 1
+    exit
+fi
 
-# Create carrier folder for HiddenMenu
-on post-fs
-    mkdir /efs/carrier 0755 system system
-    restorecon_recursive /efs
-
-    restorecon_recursive /mnt/vendor/efs
-    chown radio system /mnt/vendor/efs
-    chmod 0771 /mnt/vendor/efs
-
-on boot
-	# sec abc
-    chown system radio /sys/class/sec/sec_abc/enabled
-    chmod 0664 /sys/class/sec/sec_abc/enabled
-    chown system radio /sys/class/sec/sec_abc/log
-    chmod 0664 /sys/class/sec/sec_abc/log
-    chown system radio /sys/class/sec/sec_abc_hub/enable
-    chmod 0664 /sys/class/sec/sec_abc_hub/enable
-    chown system radio /sys/class/sec/sec_abc_hub/bootc_offset
-    chmod 0664 /sys/class/sec/sec_abc_hub/bootc_offset
-
-    # Permission for nfc driver
-    chmod 0660 /dev/sec-nfc
-    chown nfc nfc /dev/sec-nfc
-    chmod 0660 /dev/pn547
-    chown nfc nfc /dev/pn547
+if [ "$ims_disabled" = "1" ] || [ "$target" = "msm8909_512" ]; then
+    echo "ims is disabled"
+    setprop vendor.service.qti.ims.enabled 0
+else
+    echo "ims is enabled"
+    setprop vendor.service.qti.ims.enabled 1
+fi
