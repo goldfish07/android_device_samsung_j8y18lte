@@ -22,8 +22,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit common havoc phone.
 $(call inherit-product, vendor/havoc/config/common_full_phone.mk)
 
+# Gapps
+$(call inherit-product, vendor/gapps/config.mk)
+
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
+
+# Setup Gapps options
+IS_PHONE := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := havoc_j8y18lte
