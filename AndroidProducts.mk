@@ -13,10 +13,10 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_j8y18lte.mk
+    $(LOCAL_DIR)/arrow_j8y18lte.mk
 
 
 COMMON_LUNCH_CHOICES := \
-     lineage_j8y18lte-userdebug \
-     lineage_j8y18lte-eng \
-     lineage_j8y18lte-user
+     arrow_j8y18lte-userdebug \
+     arrow_j8y18lte-eng \
+     arrow_j8y18lte-user
