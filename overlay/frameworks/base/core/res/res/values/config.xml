@@ -673,15 +673,24 @@
     <string-array translatable="false" name="networkAttributes">
         <item>wifi,1,1,1,-1,true</item>
         <item>mobile,0,0,0,-1,true</item>
-        <item>mobile_mms,2,0,4,60000,true</item>
+        <item>mobile_mms,2,0,2,240000,true</item>
         <item>mobile_supl,3,0,2,60000,true</item>
         <item>mobile_dun,4,0,2,60000,true</item>
         <item>mobile_hipri,5,0,3,60000,true</item>
+        <item>bluetooth,7,7,0,-1,true</item>
+        <item>ethernet,9,9,2,-1,true</item>
         <item>mobile_fota,10,0,2,60000,true</item>
-        <item>mobile_ims,11,0,2,60000,true</item>
+        <item>mobile_ims,11,0,1,-1,true</item>
         <item>mobile_cbs,12,0,2,60000,true</item>
-        <item>bluetooth,7,7,2,-1,true</item>
-        <item>ethernet,9,9,4,-1,true</item>
+        <item>wifi_p2p,13,1,0,-1,true</item>
+        <item>mobile_ia,14,0,2,-1,true</item>
+        <item>mobile_emergency,15,0,2,-1,true</item>
+        <item>mobile_bip,23,0,2,60000,true</item>
+        <item>mobile_cas,24,0,3,60000,true</item>
+        <item>mobile_xcap,27,0,2,60000,true</item>
+        <item>mobile_ent1,28,0,2,-1,true</item>
+        <item>mobile_mcx,32,0,2,-1,true</item>
+        <item>mobile_foc,30,0,2,-1,true</item>
     </string-array>
 
     <!-- This string array should be overridden by the device to present a list of radio
@@ -822,10 +831,10 @@
          to maximize power savings but not all devices support it.
          Refer to power.h for details.
     -->
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
 
-    <integer name="config_screenBrightnessDark">5</integer>
-    <integer name="config_shutdownBatteryTemperature">590</integer>
+    <integer name="config_screenBrightnessDark">2</integer>
+    <integer name="config_shutdownBatteryTemperature">680</integer>
 
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
@@ -834,7 +843,7 @@
 
     <!-- If true, the doze component is not started until after the screen has been
          turned off and the screen off animation has been performed. -->
-    <bool name="config_dozeAfterScreenOffByDefault">true</bool>
+    <bool name="config_dozeAfterScreenOffByDefault">false</bool>
 
     <!-- Set this to true to enable the platform's auto-power-save modes like doze and
          app standby.  These are not enabled by default because they require a standard
@@ -843,15 +852,16 @@
          dozing).  This should be enabled if you have such services and expect apps to
          correctly use them when installed on your device.  Otherwise, keep this disabled
          so that applications can still use their own mechanisms. -->
-    <bool name="config_enableAutoPowerModes">true</bool>
+    <bool name="config_enableAutoPowerModes">false</bool>
 
     <!-- Configure mobile tcp buffer sizes in the form:
          rat-name:rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max
          If no value is found for the rat-name in use, the system default will be applied.
     -->
     <string-array name="config_mobile_tcp_buffers">
-        <item>lte:2097152,4194304,8388608,262144,524288,1048576</item>
-        <item>umts:4094,87380,110208,4096,16384,110208</item>
+        <item>lte:2097152,4194304,8388608,524288,1572864,2097152</item>
+        <item>lte_ca:2097152,4194304,8388608,4096,1048576,2097152</item>
+        <item>umts:4094,87380,1220608,4096,16384,1220608</item>
         <item>hspa:4094,87380,1220608,4096,16384,1220608</item>
         <item>hsupa:4094,87380,1220608,4096,16384,1220608</item>
         <item>hsdpa:4094,87380,1220608,4096,16384,1220608</item>
@@ -863,13 +873,13 @@
 
     <!-- Configure ethernet tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
-    <string name="config_wifi_tcp_buffers">524288,2097152,4194304,262144,524288,1048576</string>
+    <string name="config_wifi_tcp_buffers">524288,1048576,2097152,262144,524288,1048576</string>
 
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
     <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
 
     <!-- Operating voltage for bluetooth controller. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3300</integer>
+    <integer translatable="false" name="config_bluetooth_operating_voltage_mv">0</integer>
 
 
 
@@ -917,7 +927,7 @@
         <item>"/apex/com.android.runtime/javalib/core-libart.jar"</item>
         <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
         <item>"/product/priv-app/SystemUI/SystemUI.apk"</item>
-        <item>"/product/priv-app/SystemUI/oat/arm64/SystemUI.odex"</item>
+        <item>"/product/priv-app/SystemUI/oat/arm/SystemUI.odex"</item>
         <item>"/system/lib/libsurfaceflinger.so"</item>
     </string-array>
 

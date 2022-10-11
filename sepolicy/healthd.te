@@ -9,3 +9,4 @@ allow healthd sysfs_batteryinfo:file w_file_perms;
 
 r_dir_file(healthd, efs_file)
 r_dir_file(healthd, sec_poc_file)
+

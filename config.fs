@@ -37,12 +37,6 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: BLOCK_SUSPEND NET_ADMIN
 
-[vendor/bin/cnss-daemon]
-mode: 0755
-user: AID_BLUETOOTH
-group: AID_BLUETOOTH
-caps: NET_BIND_SERVICE
-
 [vendor/bin/pm-service]
 mode: 0755
 user: AID_SYSTEM
@@ -112,4 +106,10 @@ caps: 0
 mode: 0771
 user: AID_MEDIA
 group: AID_MEDIA
+caps: 0
+
+[efs/]
+mode: 0771
+user: AID_SYSTEM
+group: AID_RADIO
 caps: 0

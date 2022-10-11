@@ -15,3 +15,4 @@ allow hal_secure_storage_daemon secure_storage_vendor_data_file:file create_file
 
 allow hal_secure_storage_daemon system_data_file:dir getattr;
 allow hal_secure_storage_daemon vendor_data_file:dir rw_file_perms;
+
