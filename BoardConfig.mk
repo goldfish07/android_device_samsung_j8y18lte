@@ -89,6 +89,7 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Audio
+TARGET_AUDIOHAL_VARIANT := samsung
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
@@ -228,12 +229,10 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.recovery.qcom
 
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
-ENABLE_VENDOR_RIL_SERVICE := true
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy \
-    device/samsung_slsi/tee/mobicore/common
+include device/qcom/sepolicy-legacy-um/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true

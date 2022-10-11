@@ -25,4 +25,3 @@ allow wvkprov sec_poc_file:dir create_dir_perms;
 allow wvkprov sec_poc_file:file create_file_perms;
 
 get_prop(wvkprov, bssl_post_prop)
-

@@ -25,4 +25,3 @@ attribute hal_skpm_server;
 attribute hal_wvkprov;
 attribute hal_wvkprov_client;
 attribute hal_wvkprov_server;
-

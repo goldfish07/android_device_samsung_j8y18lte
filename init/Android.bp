@@ -1,7 +1,6 @@
 cc_library_static {
     name: "libinit_j8y18lte",
     recovery_available: true,
-    shared_libs: ["libbase"],
     srcs: [
         "init_j8y18lte.cpp",
     ],

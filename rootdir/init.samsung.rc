@@ -38,6 +38,9 @@ on init
     symlink /dev/block/bootdevice/by-name/steady  /dev/block/steady
     symlink /dev/block/bootdevice/by-name/persistent  /dev/block/persistent
 
+on fs
+    mount_all /vendor/etc/fstab.samsung --early
+
 # Create carrier folder for HiddenMenu
 on post-fs
     mkdir /efs/carrier 0755 system system
@@ -46,6 +49,9 @@ on post-fs
     restorecon_recursive /mnt/vendor/efs
     chown radio system /mnt/vendor/efs
     chmod 0771 /mnt/vendor/efs
+
+on late-fs
+    mount_all /vendor/etc/fstab.samsung --late
 
 on boot
 	# sec abc

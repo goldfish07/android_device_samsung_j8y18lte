@@ -18,4 +18,3 @@ type secdp_aux_device, dev_type;
 type secure_storage_device, dev_type;
 type steady_block_device, dev_type;
 type tz_device, dev_type;
-

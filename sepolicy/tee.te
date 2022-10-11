@@ -43,4 +43,3 @@ allow tee vendor_data_file:file create_file_perms;
 
 get_prop(tee, hwservicemanager_prop)
 set_prop(tee, vendor_qseecomd_prop)
-

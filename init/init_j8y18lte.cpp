@@ -60,6 +60,13 @@ void property_override_dual(char const system_prop[],
     property_override(vendor_prop, value);
 }
 
+void set_sim_info()
+{
+  
+    property_override("rild.libpath2", "/vendor/lib/libsec-ril-dsds.so");
+        
+}
+
 void set_dalvik_heap()
 {
     /* For all variant */
@@ -78,34 +85,35 @@ void vendor_load_properties()
 
  if (bootloader.find("J810G") != std::string::npos) {
         /* SM-J810G */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/j8y18ltedd/j8y18lte:10/QP1A.190711.020/J810GDDU6CUI1:user/release-keys");
-        property_override("ro.system.build.fingerprint", "samsung/j8y18ltedd/j8y18lte:10/QP1A.190711.020/J810GDDU6CUI1:user/release-keys");
-        property_override("ro.build.description", "j8y18ltedd-user 10 QP1A.190711.020 J810GDDU6CUI1 release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/j8y18ltedd/j8y18lte:10/QP1A.190711.020/J810GDDU4CUB2:user/release-keys");
+        property_override("ro.system.build.fingerprint", "samsung/j8y18ltedd/j8y18lte:10/QP1A.190711.020/J810GDDU4CUB2:user/release-keys");
+        property_override("ro.build.description", "j8y18ltedd-user 10 QP1A.190711.020 J810GDDU4CUB2 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-J810G");
         property_override_dual("ro.product.device", "ro.vendor.product.device", "j8y18lte");
     } else if (bootloader.find("J810F") != std::string::npos) {
         /* SM-J810F */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/j8y18ltejv/j8y18lte:10/QP1A.190711.020/J810FJXU6CVA1:user/release-keys");
-        property_override("ro.system.build.fingerprint", "samsung/j8y18ltejv/j8y18lte:10/QP1A.190711.020/J810FJXU6CVA1:user/release-keys");
-        property_override("ro.build.description", "j8y18ltejv-user 10 QP1A.190711.020 J810FJXU6CVA1 release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/j8y18ltejv/j8y18lte:10/QP1A.190711.020/J810FJXU4CTG2:user/release-keys");
+        property_override("ro.system.build.fingerprint", "samsung/j8y18ltejv/j8y18lte:10/QP1A.190711.020/J810FJXU4CTG2:user/release-keys");
+        property_override("ro.build.description", "j8y18ltejv-user 10 QP1A.190711.020 J810FJXU4CTG2 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-J810F");
         property_override_dual("ro.product.device", "ro.vendor.product.device", "j8y18lte");
     } else if (bootloader.find("J810M") != std::string::npos) {
         /* SM-J810M */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/j8y18lteub/j8y18lte:10/QP1A.190711.020/J810MUBU3CUK1:user/release-keys");
-        property_override("ro.system.build.fingerprint", "samsung/j8y18lteub/j8y18lte:10/QP1A.190711.020/J810MUBU3CUK1:user/release-keys");
-        property_override("ro.build.description", "j8y18lteub-user 10 QP1A.190711.020 J810MUBU3CUK1 release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/j8y18lteub/j8y18lte:10/QP1A.190711.020/J810MUBU2CTJ3:user/release-keys");
+        property_override("ro.system.build.fingerprint", "samsung/j8y18lteub/j8y18lte:10/QP1A.190711.020/J810MUBU2CTJ3:user/release-keys");
+        property_override("ro.build.description", "j8y18lteub-user 10 QP1A.190711.020 J810MUBU2CTJ3 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-J810M");
         property_override_dual("ro.product.device", "ro.vendor.product.device", "j8y18lte");
     } else if (bootloader.find("J810Y") != std::string::npos) {
         /* SM-J810Y */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/j8y18ltedx/j8y18lte:10/QP1A.190711.020/J810YDXU6CVA1:user/release-keys");
-        property_override("ro.system.build.fingerprint", "samsung/j8y18ltedx/j8y18lte:10/QP1A.190711.020/J810YDXU6CVA1:user/release-keys");
-        property_override("ro.build.description", "j8y18ltedx-user 10 QP1A.190711.020 J810YDXU6CVA1 release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/j8y18ltedx/j8y18lte:10/QP1A.190711.020/J810YDXU6CTG3:user/release-keys");
+        property_override("ro.system.build.fingerprint", "samsung/j8y18ltedx/j8y18lte:10/QP1A.190711.020/J810YDXU6CTG3:user/release-keys");
+        property_override("ro.build.description", "j8y18ltedx-user 10 QP1A.190711.020 J810YDXU6CTG3 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-J810Y");
         property_override_dual("ro.product.device", "ro.vendor.product.device", "j8y18lte");
     }
 
+    set_sim_info();
     set_dalvik_heap();
 
     device = GetProperty("ro.product.device", "");

@@ -30,4 +30,3 @@ allow macloader sysfs_net:dir r_dir_perms;
 allow macloader sysfs_wlan_fwpath:file w_file_perms;
 
 get_prop(macloader, sec_cnss_diag_prop)
-

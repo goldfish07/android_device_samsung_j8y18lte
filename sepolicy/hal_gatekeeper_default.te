@@ -10,4 +10,3 @@ allow hal_gatekeeper_default prov_efs_file:file create_file_perms;
 get_prop(hal_gatekeeper_default, tzdaemon_prop)
 get_prop(hal_gatekeeper_default, vendor_tztsdaemon_prop)
 set_prop(hal_gatekeeper_default, dumpstate_options_prop)
-

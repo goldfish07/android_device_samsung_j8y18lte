@@ -4,4 +4,3 @@ binder_call(hal_wvkprov_server, hal_wvkprov_client)
 
 add_hwservice(hal_wvkprov_server, hal_wvkprov_hwservice)
 allow hal_wvkprov_client hal_wvkprov_hwservice:hwservice_manager find;
-

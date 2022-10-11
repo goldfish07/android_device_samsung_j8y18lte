@@ -14,4 +14,3 @@ allow hal_sensors_default sec_poc_file:dir r_dir_perms;
 
 r_dir_file(hal_sensors_default, efs_file)
 r_dir_file(hal_sensors_default, sec_poc_file)
-

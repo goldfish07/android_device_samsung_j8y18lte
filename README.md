@@ -7,7 +7,6 @@ CHIPSET | Qualcomm SDM450 Snapdragon 450 (14 nm) msm8953
 GPU     | Adreno 506
 Memory  | 3GB/4GB
 Shipped Android Version | Android 8.0 with TouchWiz Essence
-Upgradable To | Android 10 (OneUI 2.0)
 Storage | 32GB/64GB
 MicroSD | Up to 256 GB
 Battery | 3500 mAh Li-Ion (non-removable)

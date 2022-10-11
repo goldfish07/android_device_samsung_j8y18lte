@@ -9,4 +9,3 @@ allow hal_gnss_qti vendor_gps_file:dir rw_dir_perms;
 allow hal_gnss_qti vendor_gps_file:file create_file_perms;
 
  hal_client_domain(hal_gnss_qti, hal_health)
- 
