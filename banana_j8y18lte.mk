@@ -19,11 +19,11 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit common Lineage phone.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit common BananaDroid phone.
+$(call inherit-product, vendor/banana/config/common.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := lineage_j8y18lte
+PRODUCT_NAME := banana_j8y18lte
 PRODUCT_DEVICE := j8y18lte
 PRODUCT_MODEL := SM-J810G
 PRODUCT_BRAND := samsung
