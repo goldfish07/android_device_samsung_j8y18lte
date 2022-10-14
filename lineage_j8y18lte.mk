@@ -22,6 +22,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit common Lineage phone.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+MAGNUS_MAINTAINER := goldfish07(Ayush Bisht)
+
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := lineage_j8y18lte
 PRODUCT_DEVICE := j8y18lte
