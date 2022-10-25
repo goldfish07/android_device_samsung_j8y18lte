@@ -164,6 +164,8 @@ on boot
     chown system system /sys/class/lcd/panel/poc_info
     chmod 0440 /sys/class/lcd/panel/poc_info
 
+# ZRAM
+    swapon_all vendor/etc/fstab.qcom
 
 # faced
 service faced /system/bin/faced
