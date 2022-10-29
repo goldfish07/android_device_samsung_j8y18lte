@@ -13,10 +13,10 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_j8y18lte.mk
+    $(LOCAL_DIR)/freaky_j8y18lte.mk
 
 
 COMMON_LUNCH_CHOICES := \
-     lineage_j8y18lte-userdebug \
-     lineage_j8y18lte-eng \
-     lineage_j8y18lte-user
+     freaky_j8y18lte-userdebug \
+     freaky_j8y18lte-eng \
+     freaky_j8y18lte-user
