@@ -44,6 +44,9 @@
 /dev/block/bootdevice/by-name/persist	 /mnt/vendor/persist	 ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,check
 /dev/block/bootdevice/by-name/efs       /mnt/vendor/efs       ext4     noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,check
 
+# ZRAM
+/dev/block/zram0								none					swap	defaults	zramsize=2147483648
+
 # VOLD :: fstab_non_AB_variant.qti
 # /devices/platform/soc/7864900.sdhci/mmc_host*        /storage/sdcard1 vfat  nosuid,nodev         wait,voldmanaged=sdcard1:auto,noemulatedsd,encryptable=footer
 # /devices/platform/soc/7000000.ssusb/7000000.dwc3/xhci-hcd.0.auto*  /storage/usbotg  vfat  nosuid,nodev  wait,voldmanaged=usbotg:auto

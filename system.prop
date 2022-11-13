@@ -16,7 +16,6 @@ persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
-DEVICE_PROVISIONED=1
 
 
 #
@@ -28,7 +27,6 @@ debug.sf.latch_unsignaled=1
 debug.egl.hw=0
 persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
-dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 debug.enable.sglscale=1
@@ -162,15 +160,6 @@ ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=1024
 
-# set cutoff voltage to 3400mV
-ro.cutoff_voltage_mv=3400
-
-#set device emmc size
-ro.emmc_size=16GB
-
-#force HAL1 for below packages
-vendor.camera.hal1.packagelist=com.skype.raider,com.google.android.talk
-
 #Enable FR27607-RIL to send ONLINE cmd in bootup
 #persist.radio.poweron_opt=1
 #low power mode for camera
@@ -183,8 +172,6 @@ persist.vendor.camera.display.lmax=1280x720
 #expose aux camera for below packages
 vendor.camera.aux.packagelist=org.codeaurora.snapcam
 
-#set cutoff voltage to 3400mV
-ro.cutoff_voltage_mv=3400
 # end of device/qcom/msm8953_64/system.prop
 
 #
@@ -195,9 +182,6 @@ ro.cmc.device_type=pd
 ro.cmc.version=2.0
 # end of device/samsung/j8y18lte/system.prop
 
-#
-# ADDITIONAL_BUILD_PROPERTIES
-#
 ro.vendor.qti.va_aosp.support=1
 
 # read DS/SS property
