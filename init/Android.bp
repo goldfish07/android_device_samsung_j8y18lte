@@ -6,7 +6,6 @@ cc_library_static {
         "init_j8y18lte.cpp",
     ],
     include_dirs: [
-        "system/core/base/include",
         "system/core/init",
     ],
 }
