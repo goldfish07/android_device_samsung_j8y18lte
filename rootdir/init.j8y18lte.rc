@@ -167,6 +167,10 @@ on boot
 # ZRAM
     swapon_all vendor/etc/fstab.qcom
 
+# Prevent bloatware apps from being installed
+	mount none /odm/lost+found /odm/app bind
+	mount none /odm/lost+found /odm/priv-app bind
+    
 # faced
 service faced /system/bin/faced
     class late_start
