@@ -76,6 +76,8 @@ patchelf --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so
 patchelf --replace-needed "libcutils.so" "libcutils-v29.so" "${BLOB_ROOT}/vendor/lib/libsec-ril.so"
 patchelf --replace-needed "libcutils.so" "libcutils-v29.so" "${BLOB_ROOT}/vendor/lib/libsec-ril-dsds.so"
 
+patchelf --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${BLOB_ROOT}/vendor/lib64/mediadrm/libwvdrmengine.so"
+
 #patchelf --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-fl26.so $BLOB_ROOT/lib/libsec-ril.so
 #patchelf --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-fl26.so $BLOB_ROOT/lib/libsec-ril-dsds.so
 

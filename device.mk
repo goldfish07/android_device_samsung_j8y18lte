@@ -262,6 +262,9 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey \
     android.hardware.drm@1.3-service.widevine
 
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite-v29.so
+
 # Memory
 PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl
