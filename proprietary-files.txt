@@ -126,7 +126,6 @@ vendor/bin/time_daemon
 vendor/bin/vaultkeeperd
 vendor/bin/vendor.qti.hardware.soter@1.0-provision
 vendor/bin/vendor_cmd_tool
-vendor/bin/wcnss_service
 vendor/bin/wvkprov
 vendor/bin/xtra-daemon
 #vendor/bin/vendor.samsung.hardware.security.wsm@1.0-service
